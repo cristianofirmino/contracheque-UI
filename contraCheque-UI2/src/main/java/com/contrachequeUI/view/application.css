@@ -1,0 +1,39 @@
+.root, .anchor-pane, .tab-pane, .tab {
+	-fx-background-color: #f2f2f2;
+}
+
+.combo-box .cell, .label, .tab, .text-field{
+	-fx-font-size: 14px;
+}
+
+.combo-box {
+	-fx-shadow-highlight-color: #c0c0c0; 
+	-fx-body-color: #ffffff;
+}
+
+.button {
+	-fx-background-color: #337AB7;
+	-fx-text-fill: #E1F5FE;
+	-fx-font-weight: 900;
+	-fx-font-size: 12px;
+}
+
+.labelCustom {
+	-fx-text-fill: #004080;
+	-fx-background-color: white;
+	
+}
+
+.textField {
+	-fx-background-color: #ffffff;
+}
+
+.dialog-pane {
+  -fx-border: 1px;
+  -fx-border-color: #999999;
+}
+
+
+#labelRodape {
+	-fx-font-size: 10px;
+}

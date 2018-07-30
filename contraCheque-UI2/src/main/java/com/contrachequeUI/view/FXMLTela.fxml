@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="principalPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="744.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.contrachequeUI.controller.FXMLTelaController">
+   <children>
+      <TabPane prefHeight="611.0" prefWidth="744.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab1" text="Processamento Contracheques">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="736.0">
+                     <children>
+                        <AnchorPane fx:id="mainPane" layoutY="-28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="744.0">
+                           <children>
+                              <Button fx:id="btnSelectLote1" layoutX="420.0" layoutY="241.0" mnemonicParsing="false" onAction="#selecionarArquivo" prefHeight="32.0" prefWidth="32.0" text="..." />
+                              <Label id="label" fx:id="labelLote1" layoutX="18.0" layoutY="241.0" prefHeight="32.0" prefWidth="400.0" styleClass="labelCustom" text="">
+                              </Label>
+                              <Label layoutX="18.0" layoutY="222.0" text="3. Selecione o arquivo PDF do Lote 1">
+                              </Label>
+                              <Label id="label" fx:id="labelCSV" layoutX="17.0" layoutY="168.0" prefHeight="32.0" prefWidth="400.0" styleClass="labelCustom" text="">
+                              </Label>
+                              <Label layoutX="18.0" layoutY="147.0" text="2. Selecione o arquivo Excel do People (.xlsx)">
+                              </Label>
+                              <Label id="label" fx:id="labelFolderProc" layoutX="18.0" layoutY="98.0" prefHeight="32.0" prefWidth="400.0" styleClass="labelCustom" text="">
+                              </Label>
+                              <Label layoutX="18.0" layoutY="75.0" text="1. Selecione a Pasta de Processamento">
+                              </Label>
+                              <Button fx:id="btnProcIndividual" layoutX="539.0" layoutY="375.0" mnemonicParsing="false" onAction="#processaIndividual" prefHeight="44.0" prefWidth="180.0" text="12. Processar Individual">
+                              </Button>
+                              <Button fx:id="btnProcCompleto" layoutX="539.0" layoutY="447.0" mnemonicParsing="false" onAction="#processaCompleto" prefHeight="44.0" prefWidth="180.0" text="13. Processar Completo">
+                              </Button>
+                              <Button fx:id="btnSelectCSV" layoutX="418.0" layoutY="168.0" mnemonicParsing="false" onAction="#selecionarArquivo" prefHeight="32.0" prefWidth="32.0" text="..." />
+                              <Button fx:id="btnSelectFolderProc" layoutX="419.0" layoutY="97.0" mnemonicParsing="false" onAction="#selecionarArquivo" prefHeight="32.0" prefWidth="32.0" text="..." />
+                              <Button fx:id="btnSelectLote2" layoutX="420.0" layoutY="308.0" mnemonicParsing="false" onAction="#selecionarArquivo" prefHeight="32.0" prefWidth="32.0" text="..." />
+                              <Label id="label" fx:id="labelLote2" layoutX="18.0" layoutY="308.0" prefHeight="32.0" prefWidth="400.0" styleClass="labelCustom" text="" />
+                              <Label layoutX="18.0" layoutY="289.0" text="4. Selecione o arquivo PDF do Lote 2" />
+                              <Button fx:id="btnSelectLote3" layoutX="418.0" layoutY="381.0" mnemonicParsing="false" onAction="#selecionarArquivo" prefHeight="32.0" prefWidth="32.0" text="..." />
+                              <Label id="label" fx:id="labelLote3" layoutX="18.0" layoutY="381.0" prefHeight="32.0" prefWidth="400.0" styleClass="labelCustom" text="" />
+                              <Label layoutX="21.0" layoutY="362.0" text="5. Selecione o arquivo PDF do Lote 3" />
+                              <Button fx:id="btnSelectLote4" layoutX="418.0" layoutY="447.0" mnemonicParsing="false" onAction="#selecionarArquivo" prefHeight="32.0" prefWidth="32.0" text="..." />
+                              <Label id="label" fx:id="labelLote4" layoutX="18.0" layoutY="447.0" prefHeight="32.0" prefWidth="400.0" styleClass="labelCustom" text="" />
+                              <Label layoutX="21.0" layoutY="428.0" text="6. Selecione o arquivo PDF do Lote 4" />
+                              <Label id="label" fx:id="labelLote5" layoutX="17.0" layoutY="515.0" prefHeight="32.0" prefWidth="400.0" styleClass="labelCustom" text="" />
+                              <Label layoutX="20.0" layoutY="496.0" text="7. Selecione o arquivo PDF do Lote 5" />
+                              <Button fx:id="btnSelectLote5" layoutX="418.0" layoutY="515.0" mnemonicParsing="false" onAction="#selecionarArquivo" prefHeight="32.0" prefWidth="32.0" text="..." />
+                              <Button fx:id="btnProcLotes" layoutX="539.0" layoutY="231.0" mnemonicParsing="false" onAction="#processaLote" prefHeight="44.0" prefWidth="180.0" text="10. Processar Lotes" />
+                              <Button fx:id="btnProcCriptografa" layoutX="539.0" layoutY="302.0" mnemonicParsing="false" onAction="#processaCriptografia" prefHeight="44.0" prefWidth="180.0" text="11. Criptografar" />
+                              <Button fx:id="btnProcExtract" layoutX="539.0" layoutY="162.0" mnemonicParsing="false" onAction="#processaExtracao" prefHeight="44.0" prefWidth="180.0" text="9. Extrair Núm. de Páginas" />
+                              <TextField fx:id="txtPeriodo" alignment="CENTER" layoutX="539.0" layoutY="97.0" prefHeight="32.0" prefWidth="180.0" />
+                              <Label layoutX="539.0" layoutY="75.0" text="8. Informe o Período" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab3" text="Enviar Contracheques">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbVEmail" prefHeight="517.0" prefWidth="541.0" />
+                        <Button fx:id="btnEnviar" disable="true" layoutX="571.0" layoutY="34.0" mnemonicParsing="false" onAction="#processaEnvio" prefHeight="44.0" prefWidth="159.0" text="Enviar" />
+                        <Label fx:id="labelQtdEmails" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="2.0" layoutY="517.0" prefHeight="18.0" prefWidth="539.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="tab2" text="Log do Processamento">
+               <content>
+                  <TextArea fx:id="txtAreaLog" editable="false" maxHeight="520.0" prefHeight="500.0" prefWidth="744.0" />
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ProgressBar fx:id="progressBar" layoutX="10.0" layoutY="149.0" prefHeight="93.0" prefWidth="722.0" progress="0.0" visible="false" />
+      <Button fx:id="btnSair" layoutX="654.0" layoutY="553.0" mnemonicParsing="false" onAction="#sair" prefHeight="44.0" prefWidth="71.0" text="sair" />
+      <Label fx:id="labelRodape" alignment="CENTER" contentDisplay="CENTER" layoutY="594.0" prefHeight="12.0" prefWidth="744.0" text="Software de Processamento de Contracheques Versão 1.0.0" />
+      <Label fx:id="labelProgress" alignment="CENTER" contentDisplay="CENTER" layoutY="185.0" prefHeight="18.0" prefWidth="744.0" textAlignment="CENTER" />
+   </children>
+</AnchorPane>
